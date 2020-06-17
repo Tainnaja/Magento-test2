@@ -1,0 +1,26 @@
+<div class="home-slider-wrapper">
+    <div class="home-slider-main below-padding">
+        <ul class="home-slider">
+            <li><a href="#"><img class="image-responsive middle-block" src="{{media url="wysiwyg/slider/apparel-home-banner-1.png"}}" alt="home banner" /> </a></li>
+            <li style="display:none;"><a href="#"><img class="image-responsive middle-block" src="{{media url="wysiwyg/slider/apparel-home-banner-2.png"}}" alt="home banner" /> </a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        require(['jquery', 'apparelowlcarousel'], function() {
+            jQuery(document).ready(function() {
+                jQuery(".home-slider").owlCarousel({
+                    items: 1,
+                    itemsDesktop: [1198, 1],
+                    itemsDesktopSmall: [1023, 1],
+                    itemsTablet: [768, 1],
+                    itemsTabletSmall: [767, 1],
+                    itemsMobile: [479, 1],
+                    pagination: false,
+                    navigationText: ["<div class='left-arrow'><i class='fa fa-arrow-left'></i></div>", "<div class='right-arrow'><i class='fa fa-arrow-right'></div>"],
+                    navigation: true,
+                });
+                jQuery(".home-slider li").show();
+            });
+        });
+    </script>
+</div>
